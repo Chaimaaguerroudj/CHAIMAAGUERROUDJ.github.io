@@ -1,1 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Chaimaa Guerroudj | Audiovisual Translator</title>
+
+    <meta name="description" content="Personal portfolio of Chaimaa Guerroudj — Translation, Audiovisual Translation, Cross-Cultural Communication and International Experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --white: #ffffff;
+            --cream: #faf9f7;
+            --soft: #f2f0ec;
+            --text: #1d1d1d;
+            --muted: #6f6f6f;
+            --line: #e6e3de;
+            --accent: #9b8172;
+            --accent-dark: #765f53;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(230,227,222,0.8);
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 85% 20%, #f3eee9 0%, transparent 30%),
+                radial-gradient(circle at 10% 80%, #f7f5f2 0%, transparent 28%),
+                white;
+            padding: 120px 30px 80px;
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            color: var(--accent-dark);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(55px, 8vw, 100px);
+            line-height: 0.95;
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            max-width: 650px;
+            color: #454545;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 610px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 22px;
+            border: 1px solid var(--text);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .button.primary {
+            background: var(--text);
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        .hero-card {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            padding: 45px 35px;
+            position: relative;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border-top: 1px solid var(--accent);
+            border-left: 1px solid var(--accent);
+            top: -12px;
+            left: -12px;
+        }
+
+        .hero-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .hero-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .languages {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .language {
+            border: 1px solid var(--line);
+            padding: 6px 10px;
+            font-size: 12px;
+            background: white;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 110px 30px;
+        }
+
+        .section-container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .section-intro {
+            max-width: 680px;
+            color: var(--muted);
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #555;
+        }
+
+        .facts {
+            border-top: 1px solid var(--line);
+        }
+
+        .fact {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .fact strong {
+            font-size: 14px;
+        }
+
+        .fact span {
+            color: var(--muted);
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            padding: 30px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
+
+        .card-number {
+            font-size: 12px;
+            color: var(--accent);
+            margin-bottom: 35px;
+        }
+
+        .card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            background: var(--cream);
+        }
+
+        .timeline {
+            border-left: 1px solid var(--line);
+            margin-top: 40px;
+        }
+
+        .timeline-item {
+            padding: 0 0 45px 35px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-dark);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+        /* RESEARCH */
+
+        .research-box {
+            background: var(--text);
+            color: white;
+            padding: 55px;
+        }
+
+        .research-box .section-label {
+            color: #c7b6aa;
+        }
+
+        .research-box h2 {
+            margin-bottom: 18px;
+        }
+
+        .research-box p {
+            color: #cfcfcf;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        .research-link {
+            display: inline-block;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact .section-intro {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 30px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-container {
+                gap: 45px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            section {
+                padding: 80px 22px;
+            }
+
+            .hero-card {
+                max-width: 500px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            CHAIMAA GUERROUDJ
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div>
+
+            <div class="small-title">
+                Translation · Languages · Culture
+            </div>
+
+            <h1>
+                Chaimaa<br>
+                Guerroudj
+            </h1>
+
+            <p class="hero-subtitle">
+                Audiovisual Translation Master's Student
+                & Translator
+            </p>
+
+            <p class="hero-description">
+                I am a Translation and Interpretation graduate
+                passionate about languages, audiovisual media,
+                cultural exchange and communication across borders.
+                I am building a career at the intersection of
+                translation, international experience and storytelling.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#portfolio" class="button primary">
+                    View My Work
+                </a>
+
+                <a href="#about" class="button">
+                    About Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>
+                Languages are more than words.
+            </h3>
+
+            <p>
+                They are stories, cultures, identities and
+                connections. My goal is to help those connections
+                cross borders.
+            </p>
+
+            <div class="languages">
+
+                <span class="language">Arabic · Native</span>
+                <span class="language">English · Fluent</span>
+                <span class="language">French · B1</span>
+                <span class="language">Spanish · Learning</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            01 · About
+        </div>
+
+        <h2>
+            A translator with an international mindset.
+        </h2>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I hold a Bachelor's degree in Translation and
+                    Interpretation and I am currently pursuing a
+                    Master's degree in Audiovisual Translation.
+                </p>
+
+                <p>
+                    My interests go beyond translation itself.
+                    I am especially interested in how languages,
+                    media and culture influence the way people
+                    understand one another.
+                </p>
+
+                <p>
+                    Alongside my studies, I have explored
+                    volunteering, teaching, customer service,
+                    international communities and online
+                    professional experiences.
+                </p>
+
+                <p>
+                    I am also working toward a future career in
+                    aviation, where communication, adaptability,
+                    cultural awareness and connecting with people
+                    from different backgrounds are essential.
+                </p>
+
+            </div>
+
+            <div class="facts">
+
+                <div class="fact">
+                    <strong>Education</strong>
+                    <span>Master's in Audiovisual Translation</span>
+                </div>
+
+                <div class="fact">
+                    <strong>Degree</strong>
+                    <span>Bachelor's in Translation & Interpretation</span>
+                </div>
+
+                <div class="fact">
+                    <strong>Based in</strong>
+                    <span>Oran, Algeria</span>
+                </div>
+
+                <div class="fact">
+                    <strong>Focus</strong>
+                    <span>Translation · Media · Culture</span>
+                </div>
+
+                <div class="fact">
+                    <strong>Career Goal</strong>
+                    <span>International & Aviation</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            02 · Portfolio
+        </div>
+
+        <h2>
+            Work in progress.
+        </h2>
+
+        <p class="section-intro">
+            This section will grow with every project I complete.
+            From subtitles and translation samples to cultural
+            adaptation and transcription, this is where I will
+            showcase the work behind my skills.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Subtitling</h3>
+                <p>
+                    Audiovisual translation projects, subtitle
+                    samples and media localization work.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Translation</h3>
+                <p>
+                    Selected translation samples across English,
+                    Arabic, French and Darija.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Transcription</h3>
+                <p>
+                    Audio and video transcription projects with
+                    a focus on accuracy and accessibility.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+    <div class="section-container">
+
+        <div class="research-box">
+
+            <div class="section-label">
+                03 · Research & Writing
+            </div>
+
+            <h2>
+                Exploring translation beyond words.
+            </h2>
+
+            <p>
+                I am interested in research at the intersection
+                of audiovisual translation, language, culture and
+                representation — particularly the way Algerian
+                culture can travel through translated media.
+            </p>
+
+            <a href="#" class="research-link">
+                Research & publications coming soon →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            04 · Experience
+        </div>
+
+        <h2>
+            Experience beyond the classroom.
+        </h2>
+
+        <p class="section-intro">
+            Professional growth is not limited to a job title.
+            Every experience has helped me develop communication,
+            adaptability, teamwork and cross-cultural skills.
+        </p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Translation & Volunteering
+                </div>
+
+                <h3>
+                    Translation & Community Projects
+                </h3>
+
+                <p>
+                    Volunteering and translation experiences that
+                    allowed me to use language skills in real-world
+                    contexts and contribute to communities.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Teaching
+                </div>
+
+                <h3>
+                    English Teaching & Tutoring
+                </h3>
+
+                <p>
+                    Helping learners develop their English through
+                    communication-focused activities, games,
+                    media and personalized learning approaches.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Customer Service
+                </div>
+
+                <h3>
+                    Retail & Customer Experience
+                </h3>
+
+                <p>
+                    Experience communicating with customers,
+                    solving problems, adapting to different needs
+                    and maintaining professionalism in busy
+                    environments.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    International Development
+                </div>
+
+                <h3>
+                    Building a Global Professional Network
+                </h3>
+
+                <p>
+                    Participating in international communities,
+                    volunteering opportunities and online
+                    experiences with people from different
+                    countries and backgrounds.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section>
+
+    <div class="section-container">
+
+        <div class="section-label">
+            05 · Achievements
+        </div>
+
+        <h2>
+            Things I'm building.
+        </h2>
+
+        <p class="section-intro">
+            A growing collection of projects, recognitions,
+            volunteering experiences, publications and
+            professional milestones.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Translation</h3>
+                <p>
+                    Building practical experience in translation,
+                    audiovisual media and multilingual communication.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>International</h3>
+                <p>
+                    Developing international experience through
+                    volunteering, communities and cross-cultural
+                    projects.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Research</h3>
+                <p>
+                    Developing research and writing projects related
+                    to audiovisual translation and culture.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            06 · Contact
+        </div>
+
+        <h2>
+            Let's connect.
+        </h2>
+
+        <p class="section-intro">
+            Whether you're interested in translation, cultural
+            projects, international collaboration or simply
+            connecting professionally, I'd love to hear from you.
+        </p>
+
+        <div class="contact-links">
+
+            <a
+                href="https://www.linkedin.com/in/chaimaa-guerroudj-073870291/"
+                target="_blank"
+                class="button primary">
+                LinkedIn
+            </a>
+
+            <a
+                href="mailto:YOUR-EMAIL@example.com"
+                class="button">
+                Email Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Chaimaa Guerroudj · Translation · Culture · Communication
+
+</footer>
+
+
+</body>
+</html>
